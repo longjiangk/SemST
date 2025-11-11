@@ -25,7 +25,7 @@ Python >= 3.9; required packages are as follows:
 # Reproduce
 
 - Step 1: Prepare the data
-Download raw data, prepared LLM embeddings, and model weights from https://xxx and save to `data/`.
+Download the raw data, LLM embeddings, and model weights from https://xxx and save them in the project root.
 
 - Step 2: Preprocess the data
 Run `python preprocess/MBA_generate_data.py` to preprocess the raw data and generate the required files.
@@ -47,5 +47,5 @@ Pay attention to setting the correct path in the code.
 
 
 The code is developed based on Spatial-MGCN and MAFN, thanks for their contributions.
-https://github.com/cs-wangbo/Spatial-MGCN
-https://github.com/zhubbbzhu/MAFN
+- https://github.com/cs-wangbo/Spatial-MGCN
+- https://github.com/zhubbbzhu/MAFN
