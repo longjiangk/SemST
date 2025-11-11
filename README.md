@@ -24,13 +24,13 @@ Python >= 3.9; required packages are as follows:
 
 # Reproduce
 
-- Step 1: Prepare the data
+- Step 1: Prepare the data. 
 Download the raw data, LLM embeddings, and model weights from https://xxx and save them in the project root.
 
-- Step 2: Preprocess the data
+- Step 2: Preprocess the data. 
 Run `python preprocess/MBA_generate_data.py` to preprocess the raw data and generate the required files.
 
-- Step 3: Load weights and run
+- Step 3: Load weights and run. 
 Run `python load_model_clustering.py` to reproduce the clustering results.
 
 
