@@ -1,0 +1,81 @@
+# Project data and artifacts (adjust if you need to version samples)
+data/
+result/
+generate_data/
+
+# Common large/binary artifacts
+*.h5ad
+*.h5
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging / build
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Test & coverage
+.pytest_cache/
+.mypy_cache/
+.cache/
+.hypothesis/
+.tox/
+.nox/
+.pylint.d/
+coverage.xml
+.coverage
+.coverage.*
+nosetests.xml
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+*.env
+
+# Temporary
+tmp/
+temp/
