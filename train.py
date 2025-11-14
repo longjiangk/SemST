@@ -21,9 +21,9 @@ from utils import *
 warnings.filterwarnings("ignore")
 
 
-def load_data(dataset, data_path_prefix="DLPFC/"):  # Added data_path_prefix argument
+def load_data(dataset, data_path_prefix="DLPFC/"): 
     print("load data:")
-    # Modified path construction
+
     base_path = "./generate_data/"
     if data_path_prefix:
         path = os.path.join(base_path, data_path_prefix, dataset, "data.h5ad")
@@ -46,7 +46,7 @@ def load_data(dataset, data_path_prefix="DLPFC/"):  # Added data_path_prefix arg
 
 
 def train(model, features, sadj, fadj, precomputed_llm_base_embeddings, graph_nei, graph_neg, config,
-          optimizer):  # Pass necessary vars
+          optimizer):  
     model.train()
     optimizer.zero_grad()
     emb, pi, disp, mean, emb1, emb2 = model(features, sadj, fadj, precomputed_llm_base_embeddings)
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     args.use_llm = True
 
     # Determine path prefixes based on config_name
-    # Assuming "DLPFC" uses a prefix and others don't for data/results
+    # Assuming "DLPFC, Embryo" uses a prefix and others don't for data/results
     data_path_prefix_str = config_name + "/" if config_name in ["DLPFC", "Embryo"] else ""
     result_path_prefix_str = config_name + "/" if config_name in ["DLPFC", "Embryo"] else ""
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
     _, ground_truth_labels = np.unique(np.array(labels, dtype=str), return_inverse=True)
     ground_truth_labels = torch.LongTensor(ground_truth_labels)
-    config.n = len(ground_truth_labels)  # Make sure this is set based on actual data
+    config.n = len(ground_truth_labels) 
     config.class_num = len(ground_truth_labels.unique())
     
     print('seed:', config.seed)
