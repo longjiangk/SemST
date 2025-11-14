@@ -29,7 +29,7 @@ Python >= 3.9; required packages are as follows:
 ## Reproduce
 
 - Step 1: Prepare the data. 
-Download the entire `data/` folder (containing the raw data, LLM embeddings, and model weights) from [zenodo](https://zenodo.org/records/17610780), and place it in the project root.
+Download the entire `data/` folder (containing the raw data, LLM embeddings, and model weights) from [Zenodo](https://zenodo.org/records/17610780), and place it in the project root.
 
 - Step 2: Preprocess the data. 
 Run `python preprocess/MBA_generate_data.py` to preprocess the raw data and generate the required files.
