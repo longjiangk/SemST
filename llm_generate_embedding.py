@@ -92,7 +92,6 @@ if __name__ == '__main__':
             top_genes_for_cell = gene_names_array[top_n_gene_indices[i]]
             cell_gene_texts.append(", ".join(reversed(top_genes_for_cell)))
 
-        # without dataset name
         prompt_system = (
             'You are an expert in bioinformatics. Represent the biological state of a cell characterized '
             'by the following highly expressed genes. Focus on capturing the functional essence relevant '

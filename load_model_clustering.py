@@ -14,7 +14,7 @@ from preprocess.config import Config
 from utils import *
 
 
-def load_data(dataset, data_path_prefix="DLPFC/"):  # Added data_path_prefix argument
+def load_data(dataset, data_path_prefix="DLPFC/"):  
     print("load data:")
 
     base_path = "./generate_data/"
@@ -63,8 +63,6 @@ if __name__ == "__main__":
     else:
         config_name = dataset_id
 
-    # Determine path prefixes based on config_name
-    # Assuming "DLPFC" uses a prefix and others don't for data/results
     data_path_prefix_str = config_name + "/" if config_name in ["DLPFC", "Embryo"] else ""
     result_path_prefix_str = config_name + "/" if config_name in ["DLPFC", "Embryo"] else ""
 
@@ -79,11 +77,10 @@ if __name__ == "__main__":
 
     config = Config(config_file_path)
     cuda_enabled = not config.no_cuda and torch.cuda.is_available()
-    # use_seed = not config.no_seed # This was not used, config.seed is used directly
 
     _, ground_truth_labels = np.unique(np.array(labels, dtype=str), return_inverse=True)
     ground_truth_labels = torch.LongTensor(ground_truth_labels)
-    config.n = len(ground_truth_labels)  # Make sure this is set based on actual data
+    config.n = len(ground_truth_labels)  
     config.class_num = len(ground_truth_labels.unique())
 
     if cuda_enabled:
@@ -93,7 +90,6 @@ if __name__ == "__main__":
         graph_nei = graph_nei.cuda()
         graph_neg = graph_neg.cuda()
 
-    # Seeding (ensure this is done correctly and consistently)
     import random
 
     np.random.seed(config.seed)
@@ -104,7 +100,7 @@ if __name__ == "__main__":
         torch.cuda.manual_seed(config.seed)
         torch.cuda.manual_seed_all(config.seed)
         torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False  # Benchmark should be False for reproducibility if True
+        torch.backends.cudnn.benchmark = False  
 
     print(f"{dataset_id} LR: {config.lr}, Alpha: {config.alpha}, Beta: {config.beta}, Gamma: {config.gamma}")
 
