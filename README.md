@@ -1,6 +1,6 @@
 # When Genes Speak: A Semantic-Guided Framework for Spatially Resolved Transcriptomics Data Clustering
 
-The paper is received by AAAI 2026.
+The paper is received by AAAI 2026.  [arXiv](https://arxiv.org/abs/2511.11380v1)
 
 ## Overview
 SemST is a framework that addresses a critical limitation in spatial transcriptomics data clustering: the disregard of the biological semantics of gene symbols. By harnessing LLMs, SemST directly transforms the symbol sets of highly expressed genes into biologically rich semantic embeddings, which are then used by the Fine-grained Semantic Modulation (FSM) module to modulate and guide spatial features. By enabling genes to “speak” their biological roles within a spatial context, SemST offers a more profound and insightful perspective on intricate tissue architecture.
